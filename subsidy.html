@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Step 3: Subsidy Details | Sherlock Life</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="mobile-frame">
+
+        <header class="topbar">
+            <span class="topbar-icon">◎</span>
+            <h3>Subsidy Request</h3>
+            <span class="topbar-icon">✓</span>
+        </header>
+
+        <div class="form-box">
+
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 100%;"></div>
+            </div>
+
+            <h2>Final Step</h2>
+            <h4>Step 3 : Subsidy Details</h4>
+
+            <!-- Configuration Selection -->
+            <label class="field-label">Select Configuration Path</label>
+            <select id="config-path">
+                <option value="">Choose Configuration</option>
+                <option value="standard">Standard Configuration (ID Required)</option>
+                <option value="exceptional">Exceptional Combinations (May Skip ID)</option>
+            </select>
+
+            <div id="config-info" class="config-info is-hidden">
+                <p id="config-info-text"></p>
+            </div>
+
+            <label class="field-label">Subsidy Quota</label>
+            <select id="quota">
+                <option value="">Select Quota</option>
+                <option>Bureaucrat</option>
+                <option>Politician</option>
+                <option>Other</option>
+            </select>
+
+            <label class="field-label">Subcategory</label>
+            <select id="subcategory">
+                <option value="">Select Subcategory</option>
+                <option>IFS</option>
+                <option>IAS</option>
+                <option>IPS</option>
+                <option>MLA</option>
+            </select>
+
+            <label class="field-label">Relation</label>
+            <select id="relation">
+                <option value="">Select Relation</option>
+                <option>Parents</option>
+                <option>Spouse</option>
+                <option>Sibling</option>
+                <option>Friends</option>
+            </select>
+
+            <label class="field-label">State</label>
+            <select id="state">
+                <option value="">Select State</option>
+                <option>Tamil Nadu</option>
+                <option>Telangana</option>
+                <option>Andhra Pradesh</option>
+                <option>Karnataka</option>
+                <option>Kerala</option>
+                <option>Maharashtra</option>
+                <option>Gujarat</option>
+                <option>Rajasthan</option>
+                <option>Uttar Pradesh</option>
+                <option>Madhya Pradesh</option>
+                <option>Punjab</option>
+                <option>Haryana</option>
+                <option>Bihar</option>
+                <option>West Bengal</option>
+                <option>Odisha</option>
+                <option>Assam</option>
+                <option>Jharkhand</option>
+                <option>Chhattisgarh</option>
+                <option>Himachal Pradesh</option>
+                <option>Uttarakhand</option>
+                <option>Goa</option>
+                <option>Manipur</option>
+                <option>Meghalaya</option>
+                <option>Tripura</option>
+            </select>
+
+            <div id="upload-section">
+                <label class="field-label">Upload ID / Proof Image</label>
+                <div class="file-row">
+                    <input type="file" id="id-upload" accept="image/*">
+                </div>
+
+                <div id="upload-preview" class="upload-preview is-hidden">
+                    <img id="preview-image" alt="Preview">
+                    <div>
+                        <div id="preview-name" class="preview-name"></div>
+                        <button id="preview-remove" class="preview-remove">Remove</button>
+                    </div>
+                </div>
+
+                <p class="warning is-hidden" id="upload-warning">
+                    Upload required for this category. Please choose a valid image file.
+                </p>
+            </div>
+
+            <p class="success is-hidden" id="eligibility-message">
+                This combination is eligible for direct verification.
+            </p>
+
+            <button class="btn-submit" id="wizard-submit">
+                Confirm Request
+            </button>
+
+        </div>
+
+        <div id="success-message" class="form-box is-hidden">
+            <h2>Success!</h2>
+            <p>Form submitted successfully.</p>
+        </div>
+
+        <p class="form-back">
+            <a href="user.html">← Back to Step 2</a>
+        </p>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('wizard-submit').addEventListener('click', () => {
+            if (validateUpload()) {
+                document.querySelector('.form-box').classList.add('is-hidden');
+                document.getElementById('success-message').classList.remove('is-hidden');
+                setTimeout(() => {
+                    window.location.href = "index.html";
+                }, 2000);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

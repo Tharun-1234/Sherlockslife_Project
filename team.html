@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team | Sherlock Life</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+            overflow-x: hidden;
+        }
+
+        /* TEAM */
+
+        .team-section {
+            padding: 90px 20px;
+            background: white;
+        }
+
+        .team-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .team-header h2 {
+            font-size: 52px;
+            color: #111;
+            margin-bottom: 15px;
+        }
+
+        .team-header p {
+            max-width: 700px;
+            margin: auto;
+            color: #666;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        .team-container {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 30px;
+            padding: 40px 25px;
+            text-align: center;
+            transition: .4s;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+        }
+
+        .team-image {
+            width: 160px;
+            height: 160px;
+            margin: auto;
+            margin-bottom: 25px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 6px solid #ffb000;
+            background: #111;
+        }
+
+        .team-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-card h3 {
+            font-size: 28px;
+            color: #111;
+            margin-bottom: 8px;
+        }
+
+        .role {
+            display: block;
+            color: #777;
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .socials a {
+            text-decoration: none;
+            background: #111;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 12px;
+            transition: .3s;
+            font-size: 14px;
+        }
+
+        .socials a:hover {
+            background: #ff9200;
+            color: black;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #0c0c0c;
+            color: #aaa;
+            text-align: center;
+            padding: 25px;
+            font-size: 15px;
+        }
+
+        /* MOBILE */
+
+        @media(max-width:768px) {
+            .team-header h2 {
+                font-size: 34px;
+            }
+
+            .team-header p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TEAM -->
+
+    <section class="team-section">
+
+        <a href="index.html" style="color: #111; text-decoration: none; font-size: 18px; margin-bottom: 20px; display: block; text-align: center;">← Back to Home</a>
+
+        <div class="team-header">
+
+            <h2>Meet Our Team</h2>
+
+            <p>
+                Professionals building secure digital services with modern
+                technology, smart automation, and secure infrastructure.
+            </p>
+
+        </div>
+
+        <div class="team-container">
+
+            <div class="team-card">
+
+                <div class="team-image">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sandipta">
+                </div>
+
+                <h3>Sandipta</h3>
+
+                <span class="role">
+                    Global Investment
+                </span>
+
+                <div class="socials">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Mail</a>
+                </div>
+
+            </div>
+
+            <div class="team-card">
+
+                <div class="team-image">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahul Sharma">
+                </div>
+
+                <h3>Rahul Sharma</h3>
+
+                <span class="role">
+                    Security Analyst
+                </span>
+
+                <div class="socials">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Mail</a>
+                </div>
+
+            </div>
+
+            <div class="team-card">
+
+                <div class="team-image">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya Verma">
+                </div>
+
+                <h3>Priya Verma</h3>
+
+                <span class="role">
+                    AI Operations
+                </span>
+
+                <div class="socials">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Mail</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+        © 2026 Sherlock Life. All Rights Reserved.
+    </footer>
+
+</body>
+
+</html>

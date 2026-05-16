@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Step 2: User Details | Sherlock Life</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="mobile-frame">
+
+        <header class="topbar">
+            <span class="topbar-icon">◎</span>
+            <h3>Subsidy Request</h3>
+            <span class="topbar-icon">✓</span>
+        </header>
+
+        <div class="form-box">
+
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 66%;"></div>
+            </div>
+
+            <h2>Your Details</h2>
+            <h4>Step 2 : Personal Information</h4>
+
+            <input type="text" placeholder="8457••••••" id="personal-id">
+            <input type="text" placeholder="Your Name" id="your-name">
+            <input type="email" placeholder="yourmail@gmail.com" id="your-email">
+
+            <button class="btn-next" onclick="if(validateStep2()) window.location.href='subsidy.html';">Next</button>
+
+        </div>
+
+        <p class="form-back">
+            <a href="target.html">← Back to Step 1</a>
+        </p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

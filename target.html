@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Step 1: Target Details | Sherlock Life</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="mobile-frame">
+
+        <header class="topbar">
+            <span class="topbar-icon">◎</span>
+            <h3>Subsidy Request</h3>
+            <span class="topbar-icon">✓</span>
+        </header>
+
+        <div class="form-box">
+
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 33%;"></div>
+            </div>
+
+            <h2>Apply for Subsidy</h2>
+            <h4>Step 1 : Target Details</h4>
+
+            <input type="text" placeholder="Target Name" id="target-name">
+            <input type="text" placeholder="75048••••••" id="target-id">
+            <input type="url" placeholder="Instagram.com/target" id="target-url">
+
+            <button class="btn-next" onclick="if(validateStep1()) window.location.href='user.html';">Next</button>
+
+        </div>
+
+        <p class="form-back">
+            <a href="index.html">← Back to Home</a>
+        </p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
